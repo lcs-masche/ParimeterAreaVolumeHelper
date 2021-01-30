@@ -142,9 +142,19 @@ let userChoice = String(readLine()!)
             print("Area of the trapezoid is: \(output)")
             print("=========================", terminator: "\n")
         
-            
+        case "5":
+            // asks for the dimensions of the Circle
+            // and then calculates the area
+            print("Enter the radius:")
+            print("  ", terminator: "")
+            let radius = Double(readLine()!)!
+
+            let output = areaOfCircle(radius: radius)
+            print("=========================", terminator: "\n")
+            print("Area of the circle is: \(output)")
+            print("=========================", terminator: "\n")
         default:
-            break
+            print("Can't calculate the area of that shape")
         }
 
 
