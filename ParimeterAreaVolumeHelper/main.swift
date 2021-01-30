@@ -22,7 +22,7 @@ func areaOfRectangle(length: Double, width: Double) -> Double {
 /// Finds the area of a parallelogram
 /// - Parameter base: the length of the base line
 /// - Parameter height: the height of the parallelogram
-func areaOfCircle(base: Double, height: Double) -> Double {
+func areaOfParallelogram(base: Double, height: Double) -> Double {
     return base * height
 }
 
@@ -72,16 +72,29 @@ let userChoice = String(readLine()!)
 
         switch userChoice {
         case "1":
-            print("Enter the length")
+            print("Enter the length:")
             print("  ", terminator: "")
             let length =  Double(readLine()!)!
-            print("Enter the width")
+            print("Enter the width:")
             print("  ", terminator: "")
             let width = Double(readLine()!)!
             let output = areaOfRectangle(length: length, width: width)
             print("=========================", terminator: "\n")
             print("Area of the rectangle is: \(output)")
             print("=========================", terminator: "\n")
+        
+        case "2":
+            print("Enter the length:")
+            print("  ", terminator: "")
+            let base = Double(readLine()!)!
+            print("Enter the height:")
+            print("  ", terminator: "")
+            let height = Double(readLine()!)!
+            let output = areaOfParallelogram(base: base, height: height)
+            print("=========================", terminator: "\n")
+            print("Area of the parallelogram is: \(output)")
+            print("=========================", terminator: "\n")
+
         default:
             break
         }
