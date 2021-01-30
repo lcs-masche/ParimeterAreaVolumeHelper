@@ -52,7 +52,7 @@ func areaOfCircle(radius: Double) -> Double {
 
 
 // MARK: Collect Input
-    
+// prompts the user with what this program does and then tells him what to choose from
 print("Hello there")
 print("I am your area calculator assistant")
 print("what can I help you with today?")
@@ -72,29 +72,77 @@ let userChoice = String(readLine()!)
 
         switch userChoice {
         case "1":
+            // asks for the dimensions of the Reactangle
+            // and then calculates the area
             print("Enter the length:")
             print("  ", terminator: "")
             let length =  Double(readLine()!)!
+           
             print("Enter the width:")
             print("  ", terminator: "")
             let width = Double(readLine()!)!
+            
             let output = areaOfRectangle(length: length, width: width)
             print("=========================", terminator: "\n")
             print("Area of the rectangle is: \(output)")
             print("=========================", terminator: "\n")
         
         case "2":
+            // asks for the dimensions of the Parallelogram
+            // and then calculates the area
             print("Enter the length:")
             print("  ", terminator: "")
             let base = Double(readLine()!)!
+            
             print("Enter the height:")
             print("  ", terminator: "")
             let height = Double(readLine()!)!
+            
             let output = areaOfParallelogram(base: base, height: height)
             print("=========================", terminator: "\n")
             print("Area of the parallelogram is: \(output)")
             print("=========================", terminator: "\n")
 
+            
+        case "3":
+           
+            // asks for the dimensions of the Trinagle
+            // and then calculates the area
+            print("Enter the length:")
+            print("  ", terminator: "")
+            let base = Double(readLine()!)!
+            
+            print("Enter the height:")
+            print("  ", terminator: "")
+            let height = Double(readLine()!)!
+            
+            let output = areaOfTrinagle(base: base, height: height)
+            print("=========================", terminator: "\n")
+            print("Area of the triangle is: \(output)")
+            print("=========================", terminator: "\n")
+        
+        case "4":
+            
+            // asks for the dimensions of the Trapezoid
+            // and then calculates the area
+            print("Enter the botom length:")
+            print("  ", terminator: "")
+            let botom = Double(readLine()!)!
+           
+            print("Enter the height:")
+            print("  ", terminator: "")
+            let height = Double(readLine()!)!
+            
+            print("Enter the top length:")
+            print("  ", terminator: "")
+            let top = Double(readLine()!)!
+            
+            let output = areaOfTrapezoid(base: botom, height: height, top: top)
+            print("=========================", terminator: "\n")
+            print("Area of the trapezoid is: \(output)")
+            print("=========================", terminator: "\n")
+        
+            
         default:
             break
         }
